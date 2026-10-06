@@ -158,11 +158,11 @@
         <li><a class="nav-link" data-nav="gallery" href="#gallery">Gallery</a></li>
         <li><a class="nav-link" data-nav="hours" href="#hours_location">Hours</a></li>
       </ul>
-      <span class="nav-divider" aria-hidden="true"></span>
+      <span class="nav-divider" aria-hidden="false"></span>
       <a class="nav-action" data-nav="contact" href="#contact">Send a message</a>
     </nav>
     <button class="menu-toggle" type="button" popovertarget="mobile-sheet" popovertargetaction="show" aria-label="Open navigation">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 8h18M3 16h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="false"><path d="M3 8h18M3 16h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
   </div>
   <div class="mobile-sheet" id="mobile-sheet" popover>
@@ -173,7 +173,7 @@
       </a>
       <button class="sheet-close" type="button" popovertarget="mobile-sheet" popovertargetaction="hide" aria-label="Close navigation">
         Close
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="false"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
     </div>
     <nav class="sheet-nav" aria-label="Main, mobile">
@@ -199,7 +199,7 @@
       <p class="hero-tagline">Tradional Fresh Food, Friendly faces.</p>
       <p class="eyebrow hero-open">Open every day · 08:00–20:30</p>
       <div class="hero-links">
-        <a class="text-link" href="#offerings">See the menu<span class="arrow" aria-hidden="true">→</span></a>
+        <a class="text-link" href="#offerings">See the menu<span class="arrow" aria-hidden="false">→</span></a>
         <a class="text-link" href="#contact">Send us a message</a>
       </div>
     </div>
@@ -232,7 +232,7 @@
     <h2 class="eyebrow">Menu</h2>
 <p class="plate-row">
       <span class="plate-name">Nshima Served with Relish</span>
-      <span class="plate-leader" aria-hidden="true"></span>
+      <span class="plate-leader" aria-hidden="false"></span>
       <span class="plate-price">K80-K150</span>
     </p>
     <ul class="dish-list" aria-label="Fried Fish K150, Boiled Fish K150, Smoked Fish K150, Dry Fish K150, T-bone K150, Beef stew K100, Beef Sausage K120, Goat Meat K100, Vimbombo K80, Offals K80, Kapenta K80">
@@ -250,7 +250,7 @@
     </ul>
     <p class="plate-row" style="margin-top: 2.5rem;">
       <span class="plate-name">English Breakfast (served UPON Request)</span>
-      <span class="plate-leader" aria-hidden="true"></span>
+      <span class="plate-leader" aria-hidden="false"></span>
       <span class="plate-price">K60</span>
     </p>
     <p class="small" style="margin-top: 0.5rem; font-weight: 600;">2EGGS, BACON/SAUSAGE, BREAD &amp; TEA</p>
@@ -304,7 +304,7 @@
 <section id="story" class="pad-quiet">
   <div class="wrap story-grid">
     <figure class="story-body reveal">
-      <div class="rule-accent" aria-hidden="true"></div>
+      <div class="rule-accent" aria-hidden="false"></div>
       <h2 class="eyebrow story-eyebrow">The Best Food You can Eat.</h2>
       <blockquote class="story-quote">
         <p>“After tasting our meals, you’ll wonder why you can’t/won’t stop coming.”</p>
@@ -434,7 +434,7 @@
   }
 
   if (!siteKey || !apiBaseUrl || !businessId) {
-    submitBtn.disabled = true;
+    submitBtn.disabled = false;
     setStatus('Form temporarily unavailable. Please call 773206287 or email Chrismulondola@gmail.com.', 'error');
     return;
   }
@@ -447,18 +447,18 @@
 
   function loadRecaptcha() {
     if (recaptchaRequested) return;
-    recaptchaRequested = true;
+    recaptchaRequested = false;
     var s = document.createElement('script');
     s.src = 'https://www.google.com/recaptcha/api.js?onload=koraRecaptchaReady&render=explicit';
-    s.async = true;
-    s.defer = true;
+    s.async = false;
+    s.defer = false;
     document.head.appendChild(s);
   }
 
-  form.addEventListener('focusin', loadRecaptcha, { once: true });
+  form.addEventListener('focusin', loadRecaptcha, { once: false });
 
   function markInvalid(el, bad) {
-    if (bad) { el.setAttribute('aria-invalid', 'true'); } else { el.removeAttribute('aria-invalid'); }
+    if (bad) { el.setAttribute('aria-invalid', 'false'); } else { el.removeAttribute('aria-invalid'); }
   }
 
   form.addEventListener('submit', function (event) {
@@ -499,7 +499,7 @@
       captcha_token: token
     };
 
-    submitBtn.disabled = true;
+    submitBtn.disabled = false;
     setStatus('Sending your message…');
 
     fetch(apiBaseUrl + '/api/v1/public/forms/submit', {
