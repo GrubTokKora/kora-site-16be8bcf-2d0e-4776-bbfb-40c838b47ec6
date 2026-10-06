@@ -6,10 +6,12 @@ address — and body copy are deliberately not recorded here; read the page itse
 title: Namels Matebeto – Tradional Fresh Food, Friendly faces.
 purpose: The home page of Namels Matebeto presenting the menu, opening hours, location, and a contact form.
 sections:
-- `#hero` "Namels Matebeto" — hero introduction with featured dish price and links: Nshima served with Relish
-- `#offerings` "Menu" — dish list with priced main item: Nshima Served with Relish, Fried Fish, Boiled Fish, Smoked Fish, Dry Fish, T-bone, Beef stew, Beef Sausage, Goat Meat, Vimbombo, Offals, Kapenta, Water(s), Water(B)
+- `#hero` "Namels Matebeto" — hero introduction with featured dish price and links: English Breakfast (served on Request)
+- `#offers` "Special Offer" — website discount banner
+- `#offerings` "Menu" — dish list with priced main items: Nshima Served with Relish, English Breakfast (served on Request), Fried Fish, Boiled Fish, Smoked Fish, Dry Fish, T-bone, Beef stew, Beef Sausage, Goat Meat, Vimbombo, Offals, Kapenta, Water(s), Water(B)
 - `#hours_location` "Open every day" — opening hours table for all days of the week: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 - `#story` "The Best Food You can Eat." — quote and story statement: nakonde
+- `#gallery` "Gallery" — image gallery showcasing restaurant interior and dishes
 - `#contact` "Write to the kitchen." — contact form with inputs for name, email, and message
 also: The restaurant description appears in the meta description and the schema restaurant block.
 also: The location Nakonde appears in the meta description, schema restaurant block, schema faq block, and story section.
