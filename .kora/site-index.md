@@ -8,7 +8,7 @@ purpose: The home page of Namels Matebeto presenting the menu, opening hours, lo
 sections:
 - `#hero` "Namels Matebeto" — hero introduction with featured dish price and links: English Breakfast (served on Request)
 - `#offers` "Special Offer" — website discount banner
-- `#offerings` "Menu" — dish list with priced main items: Nshima Served with Relish, English Breakfast (served on Request), Fried Fish, Boiled Fish, Smoked Boiled Fish, Dry Fish, T-bone, Pork, Beef stew, Beef Sausage, Goat Meat, Vimbombo, Offals, Kapenta, Water(s), Water(B), APPLE MAX
+- `#offerings` "Menu" — dish list with priced main items: Nshima Served with Relish, English Breakfast (served on Request), Fried Fish, Boiled Fish, Smoked Boiled Fish, Dry Fish, T-bone, Pork, V.chicken, B.chicken, Beef stew, Beef Sausage, Goat Meat, Vimbombo, Offals, Kapenta, Water(s), Water(B), APPLE MAX
 - `#hours_location` "Open every day" — opening hours table for all days of the week: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 - `#story` "The Best Food You can Eat." — quote and story statement: nakonde
 - `#gallery` "Gallery" — image gallery showcasing restaurant interior and dishes
